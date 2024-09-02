@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: Get commit unsafe
         run: | 
-          echo "${{ github.event.commits.*.message }}"
+          echo "${{ github.event.head_commits.message }}"
 
       - name: Get commit unsafe
         env:
-          COMMIT: ${{ github.event.commits.*.message }}
+          COMMIT: "${{ github.event.head_commits.message }}"
         run: | 
           echo "$COMMIT"
 
