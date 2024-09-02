@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "I like turtles" > malicious-file.txt
+echo "I hate turtles" > malicious-file.txt
 git config --global user.name "yu.zhe.low@intel.com"
 git config --global user.name "yuzhelow"
 git add malicious-file.txt
