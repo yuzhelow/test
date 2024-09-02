@@ -1,0 +1,15 @@
+name: Dangerous Workflow
+
+on:
+  pull_request_target:
+    branches:
+      - main
+
+jobs:
+  dangerouse_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: action/checkout@v3
+      - name: Run script
+        run: /scripts/run-tests.sh
