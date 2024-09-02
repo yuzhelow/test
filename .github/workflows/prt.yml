@@ -14,4 +14,4 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
       - name: Run script
-        run: /scripts/run-tests.sh
+        run: ./scripts/run-tests.sh
