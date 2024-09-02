@@ -1,4 +1,4 @@
-name: Sample
+name: Command Injection
 
 on: 
   workflow_dispatch:
@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get commit safe
+      - name: Get input safe
         env:
           COMMIT_MESSAGE: ${{ github.event.inputs.commit_message }}
         run: | 
           echo "$COMMIT_MESSAGE"
 
-      - name: Get commit unsafe
+      - name: Get input unsafe
         run: | 
           echo "${{ github.event.inputs.commit_message }}"
 
