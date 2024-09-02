@@ -11,7 +11,7 @@ jobs:
         run: | 
           echo "${{ github.event.head_commits.message }}"
 
-      - name: Get commit unsafe
+      - name: Get commit safe
         env:
           COMMIT: "${{ github.event.head_commits.message }}"
         run: | 
