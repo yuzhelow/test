@@ -1,0 +1,19 @@
+name: Sample
+
+on: workflow_dispatch
+
+jobs:
+  print_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get commit unsafe
+        run: | 
+          echo "${{ github.event.commits.*.message }}"
+
+      - name: Get commit unsafe
+        env:
+          COMMIT: ${{ github.event.commits.*.message }}
+        run: | 
+          echo "$COMMIT"
+
